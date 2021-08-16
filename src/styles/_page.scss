@@ -1,0 +1,21 @@
+.page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+
+  &--1 {
+    transition: width .1s;
+    z-index: 2;
+    background: #fff;
+    color: #000000;
+  }
+
+  &--2 {
+    color: #ffffff;
+    background: #000;
+  }
+}

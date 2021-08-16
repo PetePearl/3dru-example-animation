@@ -1,0 +1,30 @@
+.text {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 100px;
+  position: absolute;
+  z-index: 1;
+  white-space: nowrap;
+
+  &--1 {
+    left: 0;
+    top: 0;
+  }
+  &--2 {
+    left: 20vw;
+    top: 100px;
+  }
+  &--3 {
+    left: 10vw;
+    top: 200px;
+  }
+  &--4 {
+    left: 35vw;
+    top: 200px;
+  }
+  &--5 {
+    left: 40vw;
+    top: 300px;
+  }
+}
