@@ -1,0 +1,16 @@
+.line {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ccc;
+
+  &s {
+
+  }
+
+  &--1 { bottom: 20%; }
+  &--2 { bottom: 60%; }
+  &--3 { bottom: 40%; }
+}

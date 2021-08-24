@@ -1,14 +1,14 @@
 .page {
-  position: fixed;
+  position: absolute;
+  z-index: 1;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
   overflow: hidden;
 
   &--1 {
-    transition: width .2s;
+    transition: width .2s ease-out;
     z-index: 2;
     background: #fff;
     color: #000000;

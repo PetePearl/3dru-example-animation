@@ -1,0 +1,32 @@
+.header {
+  position: absolute;
+  z-index: 30;
+  color: #000000;
+  left: 50px;
+  top: 20px;
+  right: 50px;
+
+  &--light {
+    color: #ffffff;
+  }
+
+  &__logo {
+    svg {
+      display: block;
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .header {
+    left: 10px;
+    right: 10px;
+
+    &__logo svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

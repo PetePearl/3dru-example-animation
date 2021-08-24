@@ -1,0 +1,34 @@
+.part {
+  position: absolute;
+  z-index: 5;
+  width: 20vh;
+  height: 20vh;
+
+  background: url("http://lorica2i.beget.tech/3dland/img/bg.png") no-repeat center center / cover fixed;
+
+  &--1 {
+    bottom: 40%;
+    left: 50px;
+  }
+
+  &--2 {
+    left: 60vw;
+    height: 35vh;
+    bottom: 60%;
+  }
+
+  &--3 {
+    left: 70vw;
+    bottom: 20%;
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    clip-path: inset(0px 0 0 50%);
+  }
+
+  &--4 {
+    bottom: 20%;
+    left: 40vw;
+    border-radius: 50%;
+  }
+}

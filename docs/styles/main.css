@@ -45,16 +45,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.page {
+.wrapper {
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  z-index: 1; }
+
+.page {
+  position: absolute;
   z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden; }
   .page--1 {
-    transition: width .2s;
+    transition: width .2s ease-out;
     z-index: 2;
     background: #fff;
     color: #000000; }
@@ -65,23 +73,91 @@ table {
 .text {
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 70px;
-  line-height: 100px;
+  font-size: 16vh;
+  line-height: 20vh;
   position: absolute;
-  z-index: 1;
-  white-space: nowrap; }
+  z-index: 10;
+  white-space: nowrap;
+  transition: transform .2s ease-out; }
   .text--1 {
-    left: 0;
-    top: 0; }
+    left: 50px;
+    bottom: 60%; }
   .text--2 {
-    left: 20vw;
-    top: 100px; }
+    left: 40vw;
+    bottom: 40%; }
   .text--3 {
     left: 10vw;
-    top: 200px; }
+    bottom: 20%; }
   .text--4 {
-    left: 35vw;
-    top: 200px; }
+    left: 55vw;
+    bottom: 20%; }
   .text--5 {
+    left: 60vw;
+    bottom: 0; }
+
+@media screen and (max-width: 600px) {
+  .text {
+    font-size: 50px; }
+    .text--1 {
+      left: 10px; } }
+
+.line {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ccc; }
+  .line--1 {
+    bottom: 20%; }
+  .line--2 {
+    bottom: 60%; }
+  .line--3 {
+    bottom: 40%; }
+
+.part {
+  position: absolute;
+  z-index: 5;
+  width: 20vh;
+  height: 20vh;
+  background: url("http://lorica2i.beget.tech/3dland/img/bg.png") no-repeat center center/cover fixed; }
+  .part--1 {
+    bottom: 40%;
+    left: 50px; }
+  .part--2 {
+    left: 60vw;
+    height: 35vh;
+    bottom: 60%; }
+  .part--3 {
+    left: 70vw;
+    bottom: 20%;
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    clip-path: inset(0px 0 0 50%); }
+  .part--4 {
+    bottom: 20%;
     left: 40vw;
-    top: 300px; }
+    border-radius: 50%; }
+
+.header {
+  position: absolute;
+  z-index: 30;
+  color: #000000;
+  left: 50px;
+  top: 20px;
+  right: 50px; }
+  .header--light {
+    color: #ffffff; }
+  .header__logo svg {
+    display: block;
+    width: 120px;
+    height: 120px; }
+
+@media screen and (max-width: 600px) {
+  .header {
+    left: 10px;
+    right: 10px; }
+    .header__logo svg {
+      width: 60px;
+      height: 60px; } }
