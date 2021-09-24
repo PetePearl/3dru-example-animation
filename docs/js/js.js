@@ -14,11 +14,11 @@ window.addEventListener('scroll', function () {
   var offsetPercent = Math.floor(this.scrollY * 100 / this.innerHeight) / 2;
   var percentOfAnimation = offsetPercent > 100 ? 100 : offsetPercent;
   setBackgroundPosition(percentOfAnimation);
-  moveBlock($text1, 10, percentOfAnimation);
-  moveBlock($text2, -20, percentOfAnimation);
-  moveBlock($text3, 5, percentOfAnimation);
-  moveBlock($text4, -5, percentOfAnimation);
-  moveBlock($text5, -50, percentOfAnimation);
+  moveText($text1, 10, percentOfAnimation);
+  moveText($text2, -20, percentOfAnimation);
+  moveText($text3, 5, percentOfAnimation);
+  moveText($text4, -5, percentOfAnimation);
+  moveText($text5, -50, percentOfAnimation);
   moveBlock($part1, -15, percentOfAnimation);
   moveBlock($part2, -35, percentOfAnimation);
   moveBlock($part3, -10, percentOfAnimation);
@@ -31,8 +31,14 @@ var setBackgroundPosition = function setBackgroundPosition(percentOfAnimation) {
   });
 };
 
-var moveBlock = function moveBlock($textBlock, distance, percentOfAnimation) {
+var moveText = function moveText($textBlock, distance, percentOfAnimation) {
   $textBlock.css({
     transform: "translatex(".concat(distance * percentOfAnimation / 100, "vw)")
+  });
+};
+
+var moveBlock = function moveBlock($textBlock, distance, percentOfAnimation) {
+  $textBlock.css({
+    marginLeft: "".concat(distance * percentOfAnimation / 100, "vw")
   });
 };

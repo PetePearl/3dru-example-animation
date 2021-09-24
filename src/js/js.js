@@ -16,11 +16,11 @@ window.addEventListener('scroll', function () {
     const percentOfAnimation = offsetPercent > 100 ? 100 : offsetPercent;
 
     setBackgroundPosition(percentOfAnimation);
-    moveBlock($text1, 10, percentOfAnimation);
-    moveBlock($text2, -20, percentOfAnimation);
-    moveBlock($text3, 5, percentOfAnimation);
-    moveBlock($text4, -5, percentOfAnimation);
-    moveBlock($text5, -50, percentOfAnimation);
+    moveText($text1, 10, percentOfAnimation);
+    moveText($text2, -20, percentOfAnimation);
+    moveText($text3, 5, percentOfAnimation);
+    moveText($text4, -5, percentOfAnimation);
+    moveText($text5, -50, percentOfAnimation);
 
     moveBlock($part1, -15, percentOfAnimation);
     moveBlock($part2, -35, percentOfAnimation);
@@ -34,9 +34,15 @@ const setBackgroundPosition = (percentOfAnimation) => {
     });
 }
 
-const moveBlock = ($textBlock, distance, percentOfAnimation) => {
+const moveText = ($textBlock, distance, percentOfAnimation) => {
     $textBlock.css ({
         transform: `translatex(${distance * percentOfAnimation / 100}vw)`
+    });
+}
+
+const moveBlock = ($textBlock, distance, percentOfAnimation) => {
+    $textBlock.css ({
+        marginLeft: `${distance * percentOfAnimation / 100}vw`
     });
 }
 
