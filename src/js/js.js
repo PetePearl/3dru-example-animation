@@ -20,7 +20,7 @@ window.addEventListener('scroll', function () {
     moveText($text2, -20, percentOfAnimation);
     moveText($text3, 25, percentOfAnimation);
     moveText($text4, -5, percentOfAnimation);
-    moveText($text5, -50, percentOfAnimation);
+    moveText($text5, -40, percentOfAnimation);
 
     moveBlock($part1, -15, percentOfAnimation);
     moveBlock($part2, -35, percentOfAnimation);
