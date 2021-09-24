@@ -18,7 +18,7 @@ window.addEventListener('scroll', function () {
     setBackgroundPosition(percentOfAnimation);
     moveText($text1, 10, percentOfAnimation);
     moveText($text2, -20, percentOfAnimation);
-    moveText($text3, 5, percentOfAnimation);
+    moveText($text3, 25, percentOfAnimation);
     moveText($text4, -5, percentOfAnimation);
     moveText($text5, -50, percentOfAnimation);
 
